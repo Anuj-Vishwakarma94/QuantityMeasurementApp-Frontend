@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "name": "Anuj",
+      "email": "anujvishwakarma9827@gmail.com",
+      "password": "Xyz@123",
+      "mobile": "8878165145",
+      "id": "-mZeyHaolUU"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

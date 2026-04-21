@@ -31,7 +31,7 @@ export default defineConfig({
     proxy: {
       // All REST API calls go through the gateway
       '/api': {
-        target: import.meta.env.VITE_API_URL || 'https://qma-api-gateway.onrender.com',
+        target: process.env.VITE_API_URL || 'https://qma-api-gateway.onrender.com',
         changeOrigin: true,
         secure: false,
       },

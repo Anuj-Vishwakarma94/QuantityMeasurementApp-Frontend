@@ -20,7 +20,7 @@ export const AUTH_BASE = '/api/v1/auth';
 export const QMA_BASE  = '/api/v1/quantities';
 
 // Direct to gateway — NOT through the Vite proxy
-export const GATEWAY_BASE   = 'http://localhost:8080';
+export const GATEWAY_BASE = import.meta.env.VITE_API_URL || 'https://qma-api-gateway.onrender.com';
 export const GOOGLE_AUTH_URL = `${GATEWAY_BASE}/oauth2/authorization/google`;
 export const GITHUB_AUTH_URL = `${GATEWAY_BASE}/oauth2/authorization/github`;
 

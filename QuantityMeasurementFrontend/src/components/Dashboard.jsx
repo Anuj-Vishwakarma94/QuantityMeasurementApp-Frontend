@@ -101,7 +101,7 @@ export default function Dashboard({ isAuthenticated, onAuthClick, onHistoryClick
             </button>
           ) : (
             <>
-              <span className="text-sm opacity-90 hidden md:block mr-2">Hi, {userName.split(' ')[0]}</span>
+              <span className="text-sm opacity-90 hidden md:block mr-2">Hi, {userName ? userName.split(' ')[0] : 'User'}</span>
               <button onClick={onHistoryClick}
                 className="bg-white text-primary px-4 py-2 rounded-lg font-bold text-sm shadow-sm hover:bg-gray-100 transition-colors">
                 Activity

@@ -31,7 +31,8 @@ export default function Auth({ onLogin, onBack, showToast }) {
       });
       localStorage.setItem('token',    data.accessToken);
       localStorage.setItem('userName', data.name);
-      showToast(`Welcome back, ${data.name.split(' ')[0]}!`, 'success');
+      const firstName = data.name ? data.name.split(' ')[0] : (data.email ? data.email.split('@')[0] : 'User');
+      showToast(`Welcome back, ${firstName}!`, 'success');
       setTimeout(onLogin, 900);
     } catch (err) {
       showToast(err.message || 'Invalid credentials!', 'error');
